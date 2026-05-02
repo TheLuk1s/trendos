@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83247d85-a26b-4561-8e61-826a0a7f6cd9" name="Changes" comment="Added DB fixtures">
+    <list default="true" id="83247d85-a26b-4561-8e61-826a0a7f6cd9" name="Changes" comment="Added entities: User and Device">
+      <change afterPath="$PROJECT_DIR$/src/Enum/DevicePlatform.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Device.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777750350506</updated>
-      <workItem from="1777750351811" duration="3968000" />
+      <workItem from="1777750351811" duration="6579000" />
     </task>
     <task id="LOCAL-00001" summary="Docker environmental updates, cleanup">
       <option name="closed" value="true" />
@@ -103,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777753014241</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added entities: User and Device">
+      <option name="closed" value="true" />
+      <created>1777754341694</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1777754341694</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Docker environmental updates, cleanup" />
     <MESSAGE value="Added DB fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DB fixtures" />
+    <MESSAGE value="Added entities: User and Device" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added entities: User and Device" />
   </component>
 </project>

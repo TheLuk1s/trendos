@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Repository\DeviceRepository;
+use DateTimeImmutable;
+use App\Enum\DevicePlatform;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\DeviceRepository;
 
 #[ORM\Entity(repositoryClass: DeviceRepository::class)]
 #[ORM\Table(name: 'devices')]
@@ -19,14 +21,14 @@ class Device
     #[ORM\JoinColumn(name: 'user_id', nullable: false)]
     private User $user;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $platform = null;
+    #[ORM\Column(type: 'string', nullable: true, enumType: DevicePlatform::class)]
+    private ?DevicePlatform $platform = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $label = null;
 
     #[ORM\Column(name: 'created_at', type: 'datetime_immutable', nullable: true)]
-    private ?\DateTimeImmutable $createdAt = null;
+    private ?DateTimeImmutable $createdAt = null;
 
     public function getId(): int {
         return $this->id;
@@ -36,7 +38,7 @@ class Device
         return $this->user;
     }
 
-    public function getPlatform(): ?string {
+    public function getPlatform(): ?DevicePlatform {
         return $this->platform;
     }
 
@@ -44,7 +46,7 @@ class Device
         return $this->label;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    public function getCreatedAt(): ?DateTimeImmutable
     {
         return $this->createdAt;
     }

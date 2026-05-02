@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
+use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UserRepository;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: 'users')]
@@ -28,10 +29,10 @@ class User
     private ?string $countryCode = null;
 
     #[ORM\Column(name: 'last_active_at', type: 'datetime_immutable')]
-    private \DateTimeImmutable $lastActiveAt;
+    private DateTimeImmutable $lastActiveAt;
 
     #[ORM\Column(name: 'created_at', type: 'datetime_immutable')]
-    private \DateTimeImmutable $createdAt;
+    private DateTimeImmutable $createdAt;
 
     public function getId(): int
     {
@@ -53,12 +54,12 @@ class User
         return $this->countryCode;
     }
 
-    public function getLastActiveAt(): \DateTimeImmutable
+    public function getLastActiveAt(): DateTimeImmutable
     {
         return $this->lastActiveAt;
     }
 
-    public function getCreatedAt(): \DateTimeImmutable
+    public function getCreatedAt(): DateTimeImmutable
     {
         return $this->createdAt;
     }
