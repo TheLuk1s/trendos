@@ -1,5 +1,6 @@
 services:
   php:
+    build: .
     image: php:8.4-cli
     working_dir: /app
     volumes:
