@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
+use App\Entity\User;
 use DateTimeImmutable;
 use App\Enum\DevicePlatform;
 use App\Dto\NotificationResponse;
@@ -31,22 +32,24 @@ final readonly class NotificationService
             throw new NotFoundHttpException('User not found');
         }
 
-        $isEligible =
-            !$this->deviceRepository->userHasDeviceByPlatform($user->getId(), DevicePlatform::ANDROID)
-            && !$user->isPremium()
-            && $user->getCountryCode() === 'ES'
-            && $user->getLastActiveAt() < new DateTimeImmutable('-1 week');
+        $notifications = [];
 
-        if (!$isEligible) {
-            return [];
-        }
-
-        return [
-            new NotificationResponse(
+        if ($this->isEligibleForAndroidSetup($user)) {
+            $notifications[] = new NotificationResponse(
                 title: 'Configurar dispositivo Android',
                 description: 'Phasellus rhoncus ante dolor, at semper metus aliquam quis. Praesent finibus pharetra libero, ut feugiat mauris dapibus blandit. Donec sit.',
                 cta: 'https://trendos.com/',
-            )
-        ];
+            );
+        }
+
+        return $notifications;
+    }
+
+    private function isEligibleForAndroidSetup(User $user): bool
+    {
+        return !$this->deviceRepository->userHasDeviceByPlatform($user->getId(), DevicePlatform::ANDROID)
+            && !$user->isPremium()
+            && $user->getCountryCode() === 'ES'
+            && $user->getLastActiveAt() < new DateTimeImmutable('-1 week');
     }
 }
