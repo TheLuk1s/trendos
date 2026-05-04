@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83247d85-a26b-4561-8e61-826a0a7f6cd9" name="Changes" comment="Added entities: User and Device">
-      <change afterPath="$PROJECT_DIR$/src/Enum/DevicePlatform.php" afterDir="false" />
+    <list default="true" id="83247d85-a26b-4561-8e61-826a0a7f6cd9" name="Changes" comment="Implemented integration tests, readme file">
+      <change afterPath="$PROJECT_DIR$/tests/Service/NotificationServiceTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NotificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NotificationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Device.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/NotificationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/NotificationService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,9 @@
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.3.7/bin/php" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -73,6 +77,17 @@
       <recent name="$PROJECT_DIR$/docker/mysql/init" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="NotificationServiceTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Service\NotificationServiceTest" file="$PROJECT_DIR$/tests/Service/NotificationServiceTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.NotificationServiceTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -88,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1777750350506</updated>
-      <workItem from="1777750351811" duration="6579000" />
+      <workItem from="1777750351811" duration="22535000" />
     </task>
     <task id="LOCAL-00001" summary="Docker environmental updates, cleanup">
       <option name="closed" value="true" />
@@ -114,7 +129,39 @@
       <option name="project" value="LOCAL" />
       <updated>1777754341694</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added DevicePlatform enum">
+      <option name="closed" value="true" />
+      <created>1777759349984</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777759349984</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Docker updates: PDO setup">
+      <option name="closed" value="true" />
+      <created>1777820337365</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777820337365</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Notifications: Get notifications endpoint">
+      <option name="closed" value="true" />
+      <created>1777821061148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777821061148</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implemented integration tests, readme file">
+      <option name="closed" value="true" />
+      <created>1777846161068</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777846161068</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +171,10 @@
     <MESSAGE value="Docker environmental updates, cleanup" />
     <MESSAGE value="Added DB fixtures" />
     <MESSAGE value="Added entities: User and Device" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added entities: User and Device" />
+    <MESSAGE value="Added DevicePlatform enum" />
+    <MESSAGE value="Docker updates: PDO setup" />
+    <MESSAGE value="Notifications: Get notifications endpoint" />
+    <MESSAGE value="Implemented integration tests, readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented integration tests, readme file" />
   </component>
 </project>

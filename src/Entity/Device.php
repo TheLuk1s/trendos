@@ -30,19 +30,23 @@ class Device
     #[ORM\Column(name: 'created_at', type: 'datetime_immutable', nullable: true)]
     private ?DateTimeImmutable $createdAt = null;
 
-    public function getId(): int {
+    public function getId(): int
+    {
         return $this->id;
     }
 
-    public function getUser(): User {
+    public function getUser(): User
+    {
         return $this->user;
     }
 
-    public function getPlatform(): ?DevicePlatform {
+    public function getPlatform(): ?DevicePlatform
+    {
         return $this->platform;
     }
 
-    public function getLabel(): ?string {
+    public function getLabel(): ?string
+    {
         return $this->label;
     }
 

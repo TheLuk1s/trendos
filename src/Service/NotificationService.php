@@ -27,7 +27,7 @@ final readonly class NotificationService
     {
         $user = $this->userRepository->find($userId);
 
-        if (empty($user)) {
+        if ($user === null) {
             throw new NotFoundHttpException('User not found');
         }
 
